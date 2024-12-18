@@ -1,0 +1,55 @@
+pnina_ei,dvirsarig
+212125678,314829847
+
+1) Our UML design consists of several key classes aimed at facilitating the ASCII art algorithm.
+   Firstly, the CharsData class centralizes all information regarding individual characters,
+   including their brightness and a set of characters along with their normalized brightness post-calculation.
+
+   The SubImg class serves as a container for data, utilized to access or update it during
+   algorithm execution. The image data is stored within the ResolutionImageData class.
+   The AsciiArtAlgorithm, housing a SubImg and ResolutionImageData, manages the addition of
+   new images to the data set and verifies if an image with a specific resolution exists
+   within the data. In such cases, the algorithm does not rerun; instead,
+   it retrieves the result from the data.
+
+   The ImageUtils class functions as a utility hub, incorporating essential functionalities
+   required by the algorithm, such as padding, boxing, and calculation. To determine the type
+   of algorithm result (HTML or console), we employ a factory pattern implemented
+   in the AsciiFactory class. The UserActions class implements the UserInterface, employing
+   an AsciiAlgorithm instance to execute and manipulate algorithm-related operations.
+
+   The AlgoManager acts as a shell, housing the user interface. It leverages the ascii_output package
+   to gather input from the user and engage in conversations with them. Furthermore, we have custom
+   exceptions extending Java's built-in exceptions, primarily utilized within the Shell to handle
+   invalid user inputs effectively.
+
+2)In our Java-based implementation, we extensively utilized various data structures to manage and
+ organize our data effectively across different classes. Within the SubImg and CharsData classes,
+ we leveraged HashMaps. These data structures were instrumental in storing sets of characters efficiently.
+ By utilizing a HashMap, we could swiftly determine whether a particular set of characters had been
+ previously utilized. Furthermore, we mapped the brightness values to a TreeMap, which allowed us
+ to organize the algorithm's results based on brightness levels. Each brightness level corresponded
+ to a PriorityQueue, enabling rapid retrieval of the smallest character value.
+
+ Additionally, we employed a simple HashMap to store mappings from characters to their initial
+ brightness values. This auxiliary data structure helped retain previous data for reference.
+ In the ImageData class, we relied on another HashMap, specifically mapping tuples of images
+ and resolutions to the algorithm's results. This facilitated quick checks during algorithm execution
+ to determine if a particular image with a specific resolution had already been processed.
+
+ Moreover, the use of HashSet was pivotal in ensuring data consistency within the character algorithm.
+ By utilizing a HashSet, we could guarantee that no character occurred more than once in the character
+ algorithm, maintaining the integrity of our results.
+
+ 3)Within our project, we introduced a new package dedicated to exceptions, comprising two distinct classes:
+   InvalidParameterException and InvalidResolutionException.
+
+   Each of these classes extends Java's built-in Exception class. This approach allows us to capture
+   specific errors encountered during runtime effectively. By utilizing separate exception classes,
+   we can precisely identify the nature of the error and communicate the reason for the failure to the user.
+
+   In the event of an InvalidParameterException, the user is informed of an error related to invalid
+   parameters, whereas an InvalidResolutionException indicates an issue with resolution parameters.
+   This structured approach enhances error handling and enables clearer communication of errors to the user.
+
+4 + 5) Did not make changed.
