@@ -1,0 +1,30 @@
+pnina_ei
+212125678
+
+1.	clever strategy: the cleverPlayer will try to do a winStreak sequence in the first row of the board.
+	genius strategy: the geniusPlayer will block the cleverPlayer by making a sequence in the third colum.
+	in this way he is trying to block cleverPlayer and also trying to win the game.
+
+2.	Designing software with classes that implement a common interface is a practice commonly known as
+	programming to interfaces. This approach offers several advantages which are:  
+		
+		1. Code reusability: By implementing a common interface, multiple player classes can share the same
+		set of methods and behaviors. This promotes code reuse and reduces duplication, as the common
+		functionality can be defined once in the interface and implemented by each player class.
+
+		2. Polymorphism: Using a common interface allows you to treat different player objects uniformly,
+		regardless of their specific implementation. This enables you to write code that is more flexible
+		and adaptable to different player types. For example, you can have a list of players of different
+		types, but still call the same methods on each player object.
+		
+		3. Encapsulation: Encapsulation allows each player class to be developed independently, without
+		worrying about the implementation details of other player classes. Each class can focus on its
+		specific functionality and behavior, making the code more modular and easier to maintain.
+		
+	In summary, Code reusability, Polymorphism and  Encapsulation are three examples of advantages that can
+	be view when each calss of player implements a common interface.
+		
+		
+
+
+
